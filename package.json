@@ -1,7 +1,7 @@
 {
   "name": "myapp",
   "version": "0.1.0",
-  "homepage":"https://github.com/babji005/myapp2",
+  "homepage":"https://babji005.github.io/myapp2",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
