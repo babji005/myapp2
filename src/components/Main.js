@@ -28,7 +28,7 @@ export default class Main extends React.Component {
     console.log("reloaded");
     this.setState({ moves: 0 });
     if (content.List.length > 0) {
-      
+
       for (let i = content.List.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * i);
         const temp = content.List[i];
@@ -127,7 +127,7 @@ export default class Main extends React.Component {
               }}
               className="flip"
             >
-              <FrontSide onClick={() => this.handleClick(item)}>Card</FrontSide>
+              <FrontSide onClick={() => this.handleClick(item)}>Card{item.index}</FrontSide>
               {this.state.id === item.index && (
                 <BackSide
                   style={{
@@ -153,6 +153,7 @@ export default class Main extends React.Component {
       <div className="cards">
         {number}
         <br />
+        <hr />
 
         <div
           style={{
@@ -162,26 +163,27 @@ export default class Main extends React.Component {
             // backgroundColor: "green",
           }}
         >
-          Moves: {this.state.moves} Your-Moves:{this.state.yourmoves}{" "}
-          Your-Score:{this.state.YourScore} Best-Score:{this.state.BestScore}{" "}
+          Moves: {this.state.moves}{" "} Your-Moves:{this.state.yourmoves}{" "}
+          Your-Score:{this.state.YourScore} {" "}Best-Score:{this.state.BestScore}{" "}
           {"          "}
           <button
             type="button"
             class="btn btn-primary"
             onClick={this.shufle}
-            // flipOnClick={true}
+          // flipOnClick={true}
           >
             reset
           </button>
-          <br />
+          {" "}
           <button
             type="button"
             class="btn btn-primary"
             onClick={this.reload}
-            // flipOnClick={true}
+          // flipOnClick={true}
           >
             reload the game
           </button>
+          <hr />
         </div>
       </div>
     );
