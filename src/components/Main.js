@@ -149,41 +149,43 @@ export default class Main extends React.Component {
     });
 
     return (
-      // <div>
+      <div>
       <div className="cards">
         {number}
+        </div>
         <br />
-        <hr />
+        <hr/>
 
         <div
           style={{
             marginLeft: 80,
             marginTop: 20,
-            textAlign: "right",
+            fontSize:25
+            // textAlign: "right",
             // backgroundColor: "green",
           }}
         >
-          Moves: {this.state.moves}{" "} Your-Moves:{this.state.yourmoves}{" "}
-          Your-Score:{this.state.YourScore} {" "}Best-Score:{this.state.BestScore}{" "}
+          <b>Moves: </b>{this.state.moves} <b>Your-Moves:</b>{this.state.yourmoves}{" "}
+          <b>Your-Score:</b>{this.state.YourScore}{" "}<b>Best-Score:</b> {this.state.BestScore}{" "}
           {"          "}
           <button
             type="button"
             class="btn btn-primary"
             onClick={this.shufle}
-          // flipOnClick={true}
+            // flipOnClick={true}
           >
             reset
-          </button>
-          {" "}
+          </button>{"  "}
+          {/* <br /> */}
           <button
             type="button"
             class="btn btn-primary"
             onClick={this.reload}
-          // flipOnClick={true}
+            // flipOnClick={true}
           >
             reload the game
           </button>
-          <hr />
+          <hr/>
         </div>
       </div>
     );
